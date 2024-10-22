@@ -1,4 +1,5 @@
 import React from 'react';
+import './Loader.css';
 
 export type LoaderProps = {
     /** Размер */
@@ -7,6 +8,13 @@ export type LoaderProps = {
     className?: string;
 };
 
-const Loader: React.FC<LoaderProps> = () => null;
+const Loader: React.FC<LoaderProps> = ({ size = 'm', className = '' }) => {
+    return (
+        <div  className={` container-${size} ${className}`}>
+            <div className={`loader loader-${size} ${className}`}>
+      </div>
+        </div>
+    );
+};
 
 export default Loader;
