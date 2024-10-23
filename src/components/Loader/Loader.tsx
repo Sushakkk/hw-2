@@ -8,7 +8,7 @@ export type LoaderProps = {
     className?: string;
 };
 
-const Loader: React.FC<LoaderProps> = ({ size = 'm', className = '' }) => {
+const Loader: React.FC<LoaderProps> = ({ size = 'l', className = '' }) => {
     return (
         <div  className={` container-${size} ${className}`}>
             <div className={`loader loader-${size} ${className}`}>

@@ -10,6 +10,7 @@
   border-width: 1px 0px 0px 0px; /* только верхняя граница толщиной 1px */
   border-style: solid; /* добавление стиля границы */
   opacity: 1; /* делаем элемент видимым, если необходимо скрыть - используйте 0 */
+  
 }
 
 
@@ -19,14 +20,18 @@
 
  .loader {
     border: 5px solid rgba(81, 133, 129, 1);
-    transform: rotate(-13deg); /* Поворот на 13 градусов влево */
+    transform: rotate(-58deg); /* Поворот на 13 градусов влево */
     border-bottom-color: transparent;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
   }
   
-
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
   .container-l{
