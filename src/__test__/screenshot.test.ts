@@ -59,33 +59,33 @@ describe('Screenshot', () => {
     }
   });
 
-  // screenshotTesting({
-  //   componentName: 'button',
-  //   props: {
-  //     className: ['test-button'],
-  //     children: ['Send', 'Cancel'],
-  //     loading: [true, false, undefined],
-  //     disabled: [true, false, undefined],
-  //   },
-  //   viewPort: {
-  //     width: 200,
-  //     height: 80,
-  //   },
-  // });
+  screenshotTesting({
+    componentName: 'button',
+    props: {
+      className: ['test-button'],
+      children: ['Send', 'Cancel'],
+      loading: [true, false, undefined],
+      disabled: [true, false, undefined],
+    },
+    viewPort: {
+      width: 200,
+      height: 80,
+    },
+  });
 
-  // screenshotTesting({
-  //   name: 'Icons',
-  //   componentName: 'icons',
-  //   props: {
-  //     width: ['24', '40'],
-  //     height: ['24', '40'],
-  //     color: ['accent', 'secondary', 'primary']
-  //   },
-  //   viewPort: {
-  //     width: 140,
-  //     height: 80,
-  //   },
-  // });
+  screenshotTesting({
+    name: 'Icons',
+    componentName: 'icons',
+    props: {
+      width: ['24', '40'],
+      height: ['24', '40'],
+      color: ['accent', 'secondary', 'primary']
+    },
+    viewPort: {
+      width: 140,
+      height: 80,
+    },
+  });
 
   // screenshotTesting({
   //   name: 'Icons blur',

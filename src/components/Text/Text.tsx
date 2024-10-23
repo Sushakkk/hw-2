@@ -1,4 +1,5 @@
 import * as React from 'react'
+import './Text.css'
 
 export type TextProps = {
     /** Дополнительный класс */
@@ -17,6 +18,37 @@ export type TextProps = {
     maxLines?: number;
 };
 
-const Text: React.FC<TextProps> = () => null
+
+
+const Text: React.FC<TextProps> = ({
+  className = '',
+  view,
+  tag = 'p',
+  weight,
+  children,
+  color,
+  maxLines,
+}) => {
+  const Component = tag;
+  
+  // Формируем класс
+  const classes = [
+    className,
+    view ? `text-${view}` : '',
+    weight ? `text-weight-${weight}` : '',
+    color ? `text-color-${color}` : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  // Ограничение по количеству строк через CSS (если указано maxLines)
+  const style = maxLines ? { WebkitLineClamp: maxLines } : undefined;
+
+  return (
+    <Component className={classes} style={style}>
+      {children}
+    </Component>
+  );
+};
 
 export default Text;

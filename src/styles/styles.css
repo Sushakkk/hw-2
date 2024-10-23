@@ -22,3 +22,35 @@ figure,
 pre {
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+/*--------------------*/
+
+
+
+:root {
+  --primary: #3498db;   /* Пример цвета для primary */
+  --secondary: #2ecc71; /* Пример цвета для secondary */
+  --accent: #e74c3c;  
+  --space-s: 16px;
+  --space-xl: 24px;
+  --space-l: 20px;
+  --space-m: 16px;
+  --space-xs: 12px;
+  --space-xxs:8px;
+  --button-primary-bg: rgba(81, 133, 129, 1);
+  --button-primary-bg-disabled: rgba(217, 217, 217, 1);
+  --button-primary-text-disabled: rgba(255, 255, 255, 1);
+  --button-primary-text: rgba(255, 255, 255, 1);
+
+
+
+}
