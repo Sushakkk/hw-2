@@ -35,6 +35,7 @@ const Icon: React.FC<React.PropsWithChildren<IconProps>> = ({
       width={width}
       height={height}
       fill={getColor()}
+      stroke={getColor()}
       {...props}
     >
       {children}
