@@ -1,7 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 100%;
     gap: var(--space-xl);
     background-color: var(--card);
    
@@ -19,16 +19,24 @@
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); /* Тень */
 }
 
-.card-title{
-    font-weight: 500;
-    word-break: normal;
-    text-overflow: ellipsis;  
+.card-title {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ограничиваем текст двумя строками */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-break: keep-all; /* Сохраняем слова целиком */
+    overflow-wrap: normal; /* Предотвращаем разрыв слов */
 }
 
-.card-subtitle{
-    text-overflow: ellipsis;   
-    word-break: normal;
-
+.card-subtitle {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Ограничиваем текст тремя строками */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-break: keep-all; /* Сохраняем слова целиком */
+    overflow-wrap: normal; /* Предотвращаем разрыв слов */
 }
 
 

@@ -36,14 +36,13 @@ const Card: React.FC<CardProps> = ({
 
     <div className="card-content">
       <div className="card-body">
-
-      <Text tag="p" color="secondary" view="p-14">{captionSlot}</Text>
-      <Text tag="p" className='card-title'   view="p-20">{title}</Text>
-      <Text tag="p"  className='card-subtitle' color="secondary" view="p-16">{subtitle}</Text>
+        {captionSlot && <Text tag="p" color="secondary" view="p-14">{captionSlot}</Text>}
+        {title && <Text tag="p" data-testid="text" className="card-title" weight="bold" view="p-20">{title}</Text>}
+        {subtitle && <Text tag="p" data-testid="text" className="card-subtitle" color="secondary" view="p-16">{subtitle}</Text>}
       </div>
       <div className="card-button">
-      {contentSlot &&  <Text tag="p" weight="bold" view="p-18">{contentSlot}</Text>}
-      {actionSlot && <div>{actionSlot}</div>}
+        {contentSlot && <Text tag="p" weight="bold" view="p-18">{contentSlot}</Text>}
+        {actionSlot && <div>{actionSlot}</div>}
       </div>
     </div>
   </div>

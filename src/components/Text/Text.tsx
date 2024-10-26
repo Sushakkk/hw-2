@@ -45,7 +45,7 @@ const Text: React.FC<TextProps> = ({
   const style = maxLines ? { WebkitLineClamp: maxLines } : undefined;
 
   return (
-    <Component className={classes} style={style}>
+    <Component data-testid="text" className={classes} style={style}>
       {children}
     </Component>
   );
