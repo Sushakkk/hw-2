@@ -5,10 +5,10 @@ import Text from '../Text/Text';
 import Loader from '../Loader/Loader';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-
+  /** Состояние загрузки */
   loading?: boolean;
   disabled?: boolean;
-
+  /** Текст кнопки */
   children: React.ReactNode;
 };
 
