@@ -1,5 +1,7 @@
 import React from 'react';
 import './Input.css'; // Подключаем файл стилей
+import '../variables.css'; // Убедитесь, что путь правильный
+
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,

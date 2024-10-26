@@ -52,7 +52,9 @@ pre {
   --button-primary-text-disabled: rgba(255, 255, 255, 1);
   --button-primary-text: rgba(255, 255, 255, 1);
   --brand-hover: rgba(134, 170, 167, 1);
-  --card:rgba(255, 255, 255, 1)
+  --card:rgba(255, 255, 255, 1);
+
+  --primary-color: #518581;
 
 
 
