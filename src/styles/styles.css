@@ -1,9 +1,10 @@
 @import './Roboto/fonts';
 
 html, body {
-  font-family: 'Roboto';
+  font-family: 'Roboto',  sans-serif;
   margin: 0;
   padding: 0;
+ 
 }
 
 * {
@@ -50,6 +51,12 @@ pre {
   --button-primary-bg-disabled: rgba(217, 217, 217, 1);
   --button-primary-text-disabled: rgba(255, 255, 255, 1);
   --button-primary-text: rgba(255, 255, 255, 1);
+  --brand-hover: rgba(134, 170, 167, 1);
+  --card:rgba(255, 255, 255, 1)
+
+
+
+
 
 
 

@@ -18,6 +18,10 @@
 }
 
 
+.button:not(.button-disabled):not(.button-loading):hover { /* Применяем hover только к кнопкам, которые не disabled и не loading */
+    background-color: var(--brand-hover); /* Цвет при наведении */
+}
+
 
 .button-disabled{
     background-color: var(--button-primary-bg-disabled); 

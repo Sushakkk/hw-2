@@ -13,6 +13,7 @@ const Icon: React.FC<React.PropsWithChildren<IconProps>> = ({
   color,
   width = 24,
   height = 24,
+  stroke,
   children,
   ...props
 }) => {
@@ -35,7 +36,7 @@ const Icon: React.FC<React.PropsWithChildren<IconProps>> = ({
       width={width}
       height={height}
       fill={getColor()}
-      stroke={getColor()}
+      stroke={stroke==="none"? "none": getColor()}
       {...props}
     >
       {children}

@@ -5,10 +5,10 @@ import Text from '../Text/Text';
 import Loader from '../Loader/Loader';
 
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  /** Состояние загрузки */
+
   loading?: boolean;
   disabled?: boolean;
-  /** Текст кнопки */
+
   children: React.ReactNode;
 };
 
@@ -28,10 +28,9 @@ const Button: React.FC<ButtonProps> = ({ loading = false, disabled=false, childr
 
   return (
     <button
-      
       className={buttonClass}
-      disabled={loading} // Блокируем кнопку при загрузке
-      {...props} // Распространяем все остальные пропсы
+      disabled={loading || disabled} // Заблокируем кнопку при loading или disabled
+      {...props} 
     >
       {loading ? (
         <>
@@ -43,6 +42,7 @@ const Button: React.FC<ButtonProps> = ({ loading = false, disabled=false, childr
       )}
     </button>
   );
+  
 };
 
 export default Button;

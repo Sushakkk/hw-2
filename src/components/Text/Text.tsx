@@ -9,7 +9,7 @@ export type TextProps = {
     /** Html-тег */
     tag?:  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'div' | 'p' | 'span';
     /** Начертание шрифта */
-    weight?: 'normal' | 'medium' | 'bold';
+    weight?: 'normal' | 'medium' | 'bold' | '700';
     /** Контент */
     children: React.ReactNode;
     /** Цвет */
