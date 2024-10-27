@@ -73,35 +73,35 @@ describe('Screenshot', () => {
   //   },
   // });
 
-  // screenshotTesting({
-  //   name: 'Icons',
-  //   componentName: 'icons',
-  //   props: {
-  //     width: ['24', '40'],
-  //     height: ['24', '40'],
-  //     color: ['accent', 'secondary', 'primary']
-  //   },
-  //   viewPort: {
-  //     width: 140,
-  //     height: 80,
-  //   },
-  // });
+  screenshotTesting({
+    name: 'Icons',
+    componentName: 'icons',
+    props: {
+      width: ['24', '40'],
+      height: ['24', '40'],
+      color: ['accent', 'secondary', 'primary']
+    },
+    viewPort: {
+      width: 140,
+      height: 80,
+    },
+  });
 
-  // screenshotTesting({
-  //   name: 'Icons blur',
-  //   componentName: 'icons',
-  //   props: {
-  //     color: ['accent', 'secondary', 'primary']
-  //   },
-  //   viewPort: {
-  //     width: 140,
-  //     height: 80,
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'Icons blur',
+    componentName: 'icons',
+    props: {
+      color: ['accent', 'secondary', 'primary']
+    },
+    viewPort: {
+      width: 140,
+      height: 80,
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
   // screenshotTesting({
   //   name: 'button hover',
