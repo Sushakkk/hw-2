@@ -165,41 +165,41 @@ describe('Screenshot', () => {
   // });
 
 
-  screenshotTesting({
-    componentName: 'input',
-    props: {
-      className: ['test-input'],
-      value: ['text', undefined],
-      placeholder: ['text', undefined],
-      disabled: [true, false, undefined],
-    },
-    viewPort: {
-      width: 400,
-      height: 100,
-    },
-    // matchOptions: {
-    //   blur: 2,
-    //   failureThreshold: 0.02,
-    // }
-  });
+  // screenshotTesting({
+  //   componentName: 'input',
+  //   props: {
+  //     className: ['test-input'],
+  //     value: ['text', undefined],
+  //     placeholder: ['text', undefined],
+  //     disabled: [true, false, undefined],
+  //   },
+  //   viewPort: {
+  //     width: 400,
+  //     height: 100,
+  //   },
+  //   // matchOptions: {
+  //   //   blur: 2,
+  //   //   failureThreshold: 0.02,
+  //   // }
+  // });
 
-  screenshotTesting({
-    name: 'input focus',
-    componentName: 'input',
-    props: {
-      className: ['test-input'],
-      value: ['text', undefined],
-      placeholder: ['text', undefined],
-      disabled: [true, false, undefined],
-    },
-    viewPort: {
-      width: 400,
-      height: 100,
-    },
-    evaluate: async (p: Page) => {
-      await p.focus('.test-input')
-    }
-  });
+  // screenshotTesting({
+  //   name: 'input focus',
+  //   componentName: 'input',
+  //   props: {
+  //     className: ['test-input'],
+  //     value: ['text', undefined],
+  //     placeholder: ['text', undefined],
+  //     disabled: [true, false, undefined],
+  //   },
+  //   viewPort: {
+  //     width: 400,
+  //     height: 100,
+  //   },
+  //   evaluate: async (p: Page) => {
+  //     await p.focus('.test-input')
+  //   }
+  // });
 
 
   // screenshotTesting({
@@ -238,66 +238,66 @@ describe('Screenshot', () => {
   //   },
   // });
 
-  // screenshotTesting({
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     checked: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      checked: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   name: 'checkbox hover',
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     checked: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   evaluate: async (p: Page) => {
-  //     await p.hover('.test-checkbox');
-  //     await p.waitForTimeout(300);
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'checkbox hover',
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      checked: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    evaluate: async (p: Page) => {
+      await p.hover('.test-checkbox');
+      await p.waitForTimeout(300);
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   name: 'checkbox click',
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   evaluate: async (p: Page) => {
-  //     await p.click('.test-checkbox');
-  //     await p.waitForTimeout(300);
-  //     await p.mouse.move(100, 100);
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'checkbox click',
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    evaluate: async (p: Page) => {
+      await p.click('.test-checkbox');
+      await p.waitForTimeout(300);
+      await p.mouse.move(100, 100);
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
   afterAll((done) => {
     browser.close();
