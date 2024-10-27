@@ -29,7 +29,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   };
 
   // Определяем цвет иконки в зависимости от состояния disabled
-  const iconColor = disabled ? 'secondary' : 'accent';
+  const iconColor = disabled ? 'disabled' : 'accent';
 
   return (
     <label

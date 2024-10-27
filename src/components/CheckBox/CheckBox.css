@@ -41,18 +41,21 @@ body {
   }
 
 
-  /* Рамка при наведении */
-.checkbox-label:hover .checkbox-custom {
-    outline: 1px solid var(--primary-color); /* Цвет рамки при наведении */
-}
-.checkbox-label:hover .checkbox-input:checked:disabled {
-    outline: 1px solid red; /* Цвет рамки при наведении */
+ /* Рамка при наведении, если чекбокс не отключен */
+.checkbox-label:hover .checkbox-custom{
+    box-shadow: inset 0 0 0 1px var(--primary-color);
 }
 
-/* Рамка при клике */
+/* Рамка при клике, если чекбокс не отключен */
 .checkbox-label:active .checkbox-custom {
-    outline: 1px solid var(--primary-color); /* Цвет рамки при клике */
+    outline: 2px solid var(--primary-color); /* Цвет рамки при клике */
 }
+
+/* Убираем рамку при наведении на отключенный чекбокс */
+.checkbox-input:disabled + .checkbox-custom {
+    box-shadow: none; /* Уб ираем рамку для отключенного состояния */
+}
+
 
   
   /* Цвет фона при отключенном состоянии чекбокса */

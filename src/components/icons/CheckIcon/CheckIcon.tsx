@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Icon, { IconProps } from '../Icon';
 
-const getColor = (color?: 'primary' | 'secondary' | 'accent') => {
+const getColor = (color?: 'primary' | 'secondary' | 'accent' | 'disabled') => {
   switch (color) {
     case 'primary':
       return 'var(--primary)';
@@ -9,6 +9,8 @@ const getColor = (color?: 'primary' | 'secondary' | 'accent') => {
       return 'var(--secondary)';
     case 'accent':
       return 'var(--accent)';
+    case 'disabled':
+      return 'var(--disabled)';
     default:
       return 'currentColor'; // Цвет по умолчанию (наследование от родителя)
   }

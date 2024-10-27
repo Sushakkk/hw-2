@@ -40,7 +40,8 @@ pre {
 :root {
   --primary: rgba(0, 0, 0, 1);   /* Пример цвета для primary */
   --secondary: rgba(175, 173, 181, 1); /* Пример цвета для secondary */
-  --accent: rgba(81, 133, 129, 1);  
+  --disabled: #c3c3c3;
+  --accent: rgba(81, 133, 129, 1);   
   --space-s: 16px;
   --space-xl: 24px;
   --space-l: 20px;
