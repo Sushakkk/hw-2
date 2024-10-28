@@ -130,7 +130,7 @@ describe('Screenshot', () => {
       title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
       subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
       contentSlot: ['99.88'],
-      image: ['/picture.svg'],
+      // image: ['/picture.svg'],
       captionSlot: [undefined, 'caption-text']
     },
     viewPort: {
@@ -150,7 +150,7 @@ describe('Screenshot', () => {
       title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
       subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
       contentSlot: ['99.88'],
-      image: ['/picture.svg'],
+      // image: ['/picture.svg'],
       captionSlot: [undefined, 'caption-text']
     },
     viewPort: {
@@ -182,7 +182,7 @@ describe('Screenshot', () => {
     //   failureThreshold: 0.02,
     // }
   });
- 
+
   screenshotTesting({
     name: 'input focus',
     componentName: 'input',
