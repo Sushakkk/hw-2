@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Input from '../Input';
-import ArrowDownIcon from '../icons/ArrowDownIcon/ArrowDownIcon'; // Импортируем компонент ArrowDownIcon
+import React, { useEffect, useRef, useState } from 'react';
 import './MultiDropDown.css';
-import '../variables.css';
+import Input from '../Input/Input';
+import Text from '../Text/Text';
+import '../variables.css'; 
+import ArrowDownIcon from '../icons/ArrowDownIcon';
 
 export type Option = {
   key: string;
@@ -23,61 +24,71 @@ const MultiDropdown: React.FC<MultiDropdownProps> = ({
   options,
   value,
   onChange,
-  disabled = false,
+  disabled,
   getTitle,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [filter, setFilter] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [currentInput, setCurrentInput] = useState('');
+  const [filteredOptions, setFilteredOptions] = useState(options);
 
-  const handleToggle = () => {
-    if (!disabled) setIsOpen(!isOpen);
+  const handleInputChange = (inputValue: string) => {
+    if (value.length) {
+      return;
+    }
+    setCurrentInput(inputValue);
+    const newFilteredOptions = options.filter((option) =>
+      option.value.toLowerCase().startsWith(inputValue.toLowerCase())
+    );
+    setFilteredOptions(newFilteredOptions);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+  const handleOptionClick = (option: Option) => {
+    const optionIndex = value.findIndex((item) => item.key === option.key);
+    if (optionIndex !== -1) {
+      onChange(value.slice(0, optionIndex).concat(value.slice(optionIndex + 1)));
+      return;
+    }
+    onChange([...value, option]);
+  };
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
       setIsOpen(false);
     }
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
-  const handleOptionClick = (option: Option) => {
-    const isSelected = value.some((selected) => selected.key === option.key);
-    const newValue = isSelected
-      ? value.filter((selected) => selected.key !== option.key)
-      : [...value, option];
-    onChange(newValue);
-  };
-
-  const filteredOptions = options.filter((option) =>
-    option.value.toLowerCase().includes(filter.toLowerCase())
-  );
+  useEffect(() => {
+    setFilteredOptions(options);
+  }, [options, setFilteredOptions]);
 
   return (
-    <div ref={dropdownRef} className={`multi-dropdown ${className || ''}`}>
+    <div className={`multi-dropdown-container ${className}`} ref={dropdownRef}>
       <Input
-        value={getTitle(value)}
-        onChange={setFilter}
-        afterSlot={<ArrowDownIcon color="secondary" />} // Используем ArrowDownIcon
-        onClick={handleToggle}
-        placeholder="Введите текст"
+        type="text"
+        value={value.length ? getTitle(value) : currentInput}
+        onClick={() => !disabled && setIsOpen(true)}
+        onChange={handleInputChange}
+        placeholder={getTitle(value)}
         disabled={disabled}
+        afterSlot={<ArrowDownIcon color="secondary" />}
       />
-      {isOpen && (
-        <div className="dropdown-options">
+
+      {isOpen && !disabled && (
+        <div className="multi-dropdown-options">
           {filteredOptions.map((option) => (
             <div
               key={option.key}
-              className={`dropdown-option ${
-                value.some((selected) => selected.key === option.key) ? 'selected' : ''
-              }`}
+              className="multi-dropdown-option-wrapper"
               onClick={() => handleOptionClick(option)}
+              data-testid={option.key}
             >
-              {option.value}
+              <Text className="multi-dropdown-option-text">{option.value}</Text>
             </div>
           ))}
         </div>

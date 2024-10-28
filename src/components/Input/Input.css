@@ -1,24 +1,31 @@
+
+
 .input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     background-color: white; /* Белая заливка */
     padding: 5px 0;
-    transition: border-color var(--transition-duration) var(--transition-easing);
-    border: 1px solid var(--primary-color);
+    
+    border: 1px solid white;
 }
 
-.input-wrapper.input-empty {
-    border-color: var(--primary-color);
+/* .input-wrapper.input-empty {
+    border-color: white;
 }
 
 .input-wrapper.input-not-empty {
     border-color: var(--primary-color);
+} */
+
+
+.not-disabled{
+    border: 1px solid white;
 }
 
 .input-wrapper.input-disabled {
     background-color: var(--disabled-background-color);
-    border-color: var(--disabled-border-color);
+    /* border-color: var(--disabled-border-color); */
     color: var(--disabled-text-color);
     cursor: not-allowed;
 }

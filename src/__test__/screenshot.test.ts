@@ -44,125 +44,125 @@ describe('Screenshot', () => {
     page = await browser.newPage();
   }, 30000)
 
-  // screenshotTesting({
-  //   componentName: 'loader',
-  //   props: {
-  //     size: ['l', 'm', 's', undefined],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    componentName: 'loader',
+    props: {
+      size: ['l', 'm', 's', undefined],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   componentName: 'button',
-  //   props: {
-  //     className: ['test-button'],
-  //     children: ['Send', 'Cancel'],
-  //     loading: [true, false, undefined],
-  //     disabled: [true, false, undefined],
-  //   },
-  //   viewPort: {
-  //     width: 200,
-  //     height: 80,
-  //   },
-  // });
+  screenshotTesting({
+    componentName: 'button',
+    props: {
+      className: ['test-button'],
+      children: ['Send', 'Cancel'],
+      loading: [true, false, undefined],
+      disabled: [true, false, undefined],
+    },
+    viewPort: {
+      width: 200,
+      height: 80,
+    },
+  });
 
-  // screenshotTesting({
-  //   name: 'Icons',
-  //   componentName: 'icons',
-  //   props: {
-  //     width: ['24', '40'],
-  //     height: ['24', '40'],
-  //     color: ['accent', 'secondary', 'primary']
-  //   },
-  //   viewPort: {
-  //     width: 140,
-  //     height: 80,
-  //   },
-  // });
+  screenshotTesting({
+    name: 'Icons',
+    componentName: 'icons',
+    props: {
+      width: ['24', '40'],
+      height: ['24', '40'],
+      color: ['accent', 'secondary', 'primary']
+    },
+    viewPort: {
+      width: 140,
+      height: 80,
+    },
+  });
 
-  // screenshotTesting({
-  //   name: 'Icons blur',
-  //   componentName: 'icons',
-  //   props: {
-  //     color: ['accent', 'secondary', 'primary']
-  //   },
-  //   viewPort: {
-  //     width: 140,
-  //     height: 80,
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'Icons blur',
+    componentName: 'icons',
+    props: {
+      color: ['accent', 'secondary', 'primary']
+    },
+    viewPort: {
+      width: 140,
+      height: 80,
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   name: 'button hover',
-  //   componentName: 'button',
-  //   props: {
-  //     className: ['test-button'],
-  //     children: ['Send', 'Cancel'],
-  //     loading: [true, false, undefined],
-  //     disabled: [true, false, undefined],
-  //   },
-  //   viewPort: {
-  //     width: 200,
-  //     height: 80,
-  //   },
-  //   evaluate: async (p: Page) => {
-  //     await p.hover('.test-button');
-  //     await p.waitForTimeout(300);
-  //   }
-  // });
+  screenshotTesting({
+    name: 'button hover',
+    componentName: 'button',
+    props: {
+      className: ['test-button'],
+      children: ['Send', 'Cancel'],
+      loading: [true, false, undefined],
+      disabled: [true, false, undefined],
+    },
+    viewPort: {
+      width: 200,
+      height: 80,
+    },
+    evaluate: async (p: Page) => {
+      await p.hover('.test-button');
+      await p.waitForTimeout(300);
+    }
+  });
 
 
-  // screenshotTesting({
-  //   componentName: 'card',
-  //   props: {
-  //     className: ['test-card'],
-  //     title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
-  //     subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
-  //     contentSlot: ['99.88'],
-  //     // image: ['/picture.svg'],
-  //     captionSlot: [undefined, 'caption-text']
-  //   },
-  //   viewPort: {
-  //     width: 380,
-  //     height: 650,
-  //   },
-  //   matchOptions: {
-  //     failureThreshold: 0.07,
-  //   },
-  // });
+  screenshotTesting({
+    componentName: 'card',
+    props: {
+      className: ['test-card'],
+      title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
+      subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
+      contentSlot: ['99.88'],
+      image: ['/picture.svg'],
+      captionSlot: [undefined, 'caption-text']
+    },
+    viewPort: {
+      width: 380,
+      height: 650,
+    },
+    matchOptions: {
+      failureThreshold: 0.07,
+    },
+  });
 
-  // screenshotTesting({
-  //   name: 'card hover',
-  //   componentName: 'card',
-  //   props: {
-  //     className: ['test-card'],
-  //     title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
-  //     subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
-  //     contentSlot: ['99.88'],
-  //     // image: ['/picture.svg'],
-  //     captionSlot: [undefined, 'caption-text']
-  //   },
-  //   viewPort: {
-  //     width: 380,
-  //     height: 650,
-  //   },
-  //   matchOptions: {
-  //     failureThreshold: 0.07,
-  //   },
-  //   evaluate: async (p: Page) =>
-  //     await p.hover('.test-card')
-  // });
+  screenshotTesting({
+    name: 'card hover',
+    componentName: 'card',
+    props: {
+      className: ['test-card'],
+      title: ['kts-school-frontend', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
+      subtitle: ['ktsstudio', 'kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend kts-school-frontend'],
+      contentSlot: ['99.88'],
+      image: ['/picture.svg'],
+      captionSlot: [undefined, 'caption-text']
+    },
+    viewPort: {
+      width: 380,
+      height: 650,
+    },
+    matchOptions: {
+      failureThreshold: 0.07,
+    },
+    evaluate: async (p: Page) =>
+      await p.hover('.test-card')
+  });
 
 
   screenshotTesting({
@@ -177,12 +177,12 @@ describe('Screenshot', () => {
       width: 400,
       height: 100,
     },
-    // matchOptions: {
-    //   blur: 2,
-    //   failureThreshold: 0.02,
-    // }
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
   });
-
+ 
   screenshotTesting({
     name: 'input focus',
     componentName: 'input',
@@ -238,66 +238,66 @@ describe('Screenshot', () => {
     },
   });
 
-  // screenshotTesting({
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     checked: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      checked: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   name: 'checkbox hover',
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     checked: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   evaluate: async (p: Page) => {
-  //     await p.hover('.test-checkbox');
-  //     await p.waitForTimeout(300);
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'checkbox hover',
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      checked: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    evaluate: async (p: Page) => {
+      await p.hover('.test-checkbox');
+      await p.waitForTimeout(300);
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
-  // screenshotTesting({
-  //   name: 'checkbox click',
-  //   componentName: 'checkbox',
-  //   props: {
-  //     disabled: [true, false, undefined],
-  //     className: ['test-checkbox'],
-  //   },
-  //   viewPort: {
-  //     width: 100,
-  //     height: 100,
-  //   },
-  //   evaluate: async (p: Page) => {
-  //     await p.click('.test-checkbox');
-  //     await p.waitForTimeout(300);
-  //     await p.mouse.move(100, 100);
-  //   },
-  //   matchOptions: {
-  //     blur: 2,
-  //     failureThreshold: 0.02,
-  //   }
-  // });
+  screenshotTesting({
+    name: 'checkbox click',
+    componentName: 'checkbox',
+    props: {
+      disabled: [true, false, undefined],
+      className: ['test-checkbox'],
+    },
+    viewPort: {
+      width: 100,
+      height: 100,
+    },
+    evaluate: async (p: Page) => {
+      await p.click('.test-checkbox');
+      await p.waitForTimeout(300);
+      await p.mouse.move(100, 100);
+    },
+    matchOptions: {
+      blur: 2,
+      failureThreshold: 0.02,
+    }
+  });
 
   afterAll((done) => {
     browser.close();

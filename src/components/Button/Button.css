@@ -27,6 +27,11 @@
     background-color: var(--button-primary-bg-disabled); 
 }
 
+.button-disabled:hover {
+    background-color: var(--button-primary-bg-disabled); /* Остается цвет для disabled */
+    cursor: not-allowed; /* Курсор указывает, что кнопка неактивна */
+}
+
 .button-loading {
     display: flex;
     align-items: center;

@@ -17,13 +17,13 @@ export type InputProps = Omit<
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
-    { value, onChange, afterSlot, type = 'text', className = '', disabled, placeholder, ...rest },
+    { value, onChange, afterSlot, type = 'text', className = '', disabled=false, placeholder, ...rest },
     ref
   ) => {
     const wrapperClassNames = [
       'input-wrapper',
       className,
-      disabled ? 'input-disabled' : '',
+      disabled ? 'input-disabled' : 'not-disabled',
       value ? 'input-not-empty' : 'input-empty',
     ]
       .filter(Boolean)

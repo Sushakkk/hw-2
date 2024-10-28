@@ -1,33 +1,41 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/styles.css';
-import CheckBox from './components/CheckBox';
 import './components/variables.css';
-import CheckIcon from './components/icons/CheckIcon/CheckIcon';
-import MultiDropdown from './components/MultiDropdown/MultiDropdown';
+import Input from './components/Input/Input';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 const App = () => {
-  
+  const [inputValue, setInputValue] = useState<string>('text');
 
   return (
     <React.StrictMode>
-      <MultiDropdown
-  options={[
-    { key: 'msk', value: 'Москва' },
-    { key: 'spb', value: 'Санкт-Петербург' },
-    { key: 'ekb', value: 'Екатеринбург' },
-  ]}
-  value={[{ key: 'msk', value: 'Москва' }]}
-  onChange={(newValue) => console.log('Выбрано:', newValue)}
-  getTitle={(values) => (values.length === 0 ? 'Выберите город' : `Выбрано: ${values.length}`)}
-/>
+      <div style={{ margin: '50px' }}></div>
 
-       
+      {/* input-className=test-input; value=text; placeholder=text; disabled=true */}
+      <Input
+        className="test-input"
+        value={inputValue}
+        onChange={setInputValue}
+        placeholder="text"
+      />
 
+<div style={{ margin: '50px' }}></div>
+
+
+      {/* input-className=test-input; value=text; placeholder=text; disabled=false */}
+      <Input
+        className="test-input"
+        value={inputValue}
+        onChange={setInputValue}
+        placeholder="text"
+        disabled={false}
+      />
+
+      
     </React.StrictMode>
   );
 };
