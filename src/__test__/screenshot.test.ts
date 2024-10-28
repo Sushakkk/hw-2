@@ -177,10 +177,10 @@ describe('Screenshot', () => {
       width: 400,
       height: 100,
     },
-    matchOptions: {
-      blur: 2,
-      failureThreshold: 0.02,
-    }
+    // matchOptions: {
+    //   blur: 2,
+    //   failureThreshold: 0.02,
+    // }
   });
  
   screenshotTesting({

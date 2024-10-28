@@ -6,7 +6,7 @@
     align-items: center;
     background-color: white; /* Белая заливка */
     padding: 5px 0;
-    
+    font-size: var(--font-size-large);
     border: 1px solid white;
 }
 
@@ -19,9 +19,7 @@
 } */
 
 
-.not-disabled{
-    border: 1px solid white;
-}
+
 
 .input-wrapper.input-disabled {
     background-color: var(--disabled-background-color);
